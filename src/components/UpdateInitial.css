@@ -1,0 +1,57 @@
+#light .updateInitial {
+  border: 1px solid black;
+  min-height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+#dark .updateInitial {
+  border: 1px solid white;
+  min-height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+#light input {
+  background-color: white;
+  color: black;
+}
+
+#dark input {
+  background-color: black;
+  color: white;
+}
+
+#light .update-text {
+  border: 1px solid black;
+  border-style: none;
+  height: 2rem;
+  width: 95vw;
+  font-size: 1rem;
+}
+
+#dark .update-text {
+  border: 1px solid white;
+  border-style: none;
+  height: 2rem;
+  width: 95vw;
+  font-size: 1rem;
+  margin: auto;
+}
+
+#light ::placeholder {
+  color: black;
+}
+#dark ::placeholder {
+  color: white;
+}

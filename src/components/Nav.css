@@ -1,0 +1,17 @@
+* {
+  padding: 0%;
+  border: 0;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.nav {
+  border-bottom: 1px solid rgb(215, 231, 246);
+  height: 4vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #5c8aff;
+}

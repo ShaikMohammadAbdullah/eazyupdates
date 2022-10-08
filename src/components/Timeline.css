@@ -1,0 +1,43 @@
+.timeline {
+  display: flex;
+  height: 100%;
+}
+
+#dark .timeline {
+  color: white;
+}
+
+.timeline-text {
+  width: 30vw;
+}
+
+.timeline-heading {
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.timeline-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 2rem 2rem;
+}
+
+.timeline-date {
+  font-size: 1.25rem;
+}
+
+.timeline-data {
+  padding-top: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.timeline-image {
+  width: 70vw;
+  height: 100vh;
+  /* border: 1px solid black; */
+}
