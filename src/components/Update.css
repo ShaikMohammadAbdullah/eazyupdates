@@ -1,6 +1,33 @@
-.update {
+#light .update {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem;
+  margin: auto;
+  width: 97%;
+  padding-top: 1.5rem;
+}
+#dark .update {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+  width: 97%;
+  padding-top: 1.5rem;
+}
+
+#light .button-update {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgb(100, 94, 94);
+  cursor: pointer;
+  color: white;
+}
+#dark .button-update {
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgb(243, 223, 223);
+  color: black;
+  cursor: pointer;
 }

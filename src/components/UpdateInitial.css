@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  width: 100%;
   border-radius: 1.25rem;
 }
 
@@ -19,6 +20,7 @@ input:focus {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  width: 100%;
   border-radius: 1.25rem;
 }
 
@@ -36,22 +38,52 @@ input:focus {
   border: 1px solid black;
   border-style: none;
   height: 2rem;
-  width: 95vw;
+  width: 100%;
   font-size: 1rem;
 }
 
 #dark .update-text {
   border: 1px solid white;
   border-style: none;
+  width: 100%;
   height: 2rem;
-  width: 95vw;
   font-size: 1rem;
-  margin: auto;
 }
 
 #light ::placeholder {
   color: black;
 }
 #dark ::placeholder {
+  color: white;
+}
+
+#light .submit-button {
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgb(100, 94, 94);
+  cursor: pointer;
+  color: white;
+  margin: 0 0.5rem;
+}
+#dark .submit-button {
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgb(243, 223, 223);
+  color: black;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.button-section {
+  display: flex;
+}
+
+#light .close-button {
+  background-color: brown;
+}
+#dark .close-button {
+  background-color: brown;
   color: white;
 }
