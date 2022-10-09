@@ -2,40 +2,52 @@ import React, { useState, useEffect } from "react";
 import "./Timeline.css";
 import { ReactComponent as UpdatesLogo } from "../images/UpdatesLogo.svg";
 import axios from "axios";
+import Error from "./Error";
+import LoadingScreen from "react-loading-screen";
 
 const Timeline = () => {
   const [datas, setDatas] = useState([]);
+  const [error, setError] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/todos")
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
       .then((res) => {
-        const select = res.data.slice(0, 8);
-        console.log(select);
-        setDatas(select);
+        setDatas(res.data);
+        setError(false);
+        setLoading(false);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => setError(true));
   }, []);
-
-  const date = new Date();
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let year = date.getFullYear();
-
-  let currentDate = `${day}-${month}-${year}`;
 
   return (
     <div className="timeline">
       <div className="timeline-text">
-        <div className="timeline-heading">Timeline</div>
-        {datas?.map((data) => {
-          return (
-            <div className="timeline-info">
-              <div className="timeline-date">{currentDate}</div>
-              <div className="timeline-data">{data?.title}</div>
-            </div>
-          );
-        })}
+        {loading ? (
+          <LoadingScreen
+            loading={true}
+            bgColor="rgba(255,255,255,0.8)"
+            spinnerColor="#9ee5f8"
+            textColor="#676767"
+            logoSrc=""
+            text=""
+          ></LoadingScreen>
+        ) : error ? (
+          <Error />
+        ) : (
+          <>
+            <div className="timeline-heading">Timeline</div>
+            {datas?.map((data) => {
+              return (
+                <div className="timeline-info">
+                  <div className="timeline-date">{}</div>
+                  <div className="timeline-data">{data?.title}</div>
+                </div>
+              );
+            })}
+          </>
+        )}
       </div>
       <UpdatesLogo className="timeline-image" />
     </div>

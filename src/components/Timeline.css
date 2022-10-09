@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+#light .timeline {
+  color: black;
+}
+
 #dark .timeline {
   color: white;
 }
