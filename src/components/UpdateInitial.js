@@ -20,6 +20,8 @@ const UpdateInitial = ({ setUpdate, addTask }) => {
         type="text"
         placeholder="Update..."
         value={text}
+        spellCheck="false"
+        contentEditable="true"
         className="update-text"
         onChange={(e) => setText(e.target.value)}
       />

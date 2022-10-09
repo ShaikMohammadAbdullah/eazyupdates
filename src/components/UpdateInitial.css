@@ -1,9 +1,9 @@
 #light .updateInitial {
-  border: 1px solid black;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   min-height: 6vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 1rem;
   width: 100%;
   border-radius: 1.25rem;
@@ -14,11 +14,11 @@ input:focus {
 }
 
 #dark .updateInitial {
-  border: 1px solid white;
+  box-shadow: 0 0 5px 0 white;
   min-height: 6vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 1rem;
   width: 100%;
   border-radius: 1.25rem;
@@ -85,5 +85,36 @@ input:focus {
 }
 #dark .close-button {
   background-color: brown;
+  color: white;
+}
+
+#light .bold-button {
+  background-color: #789bf2;
+  color: white;
+  font-weight: 700;
+}
+#light .italian-button {
+  background-color: #789bf2;
+  font-weight: 700;
+  color: white;
+}
+#light .underlined-button {
+  background-color: #789bf2;
+  font-weight: 700;
+  color: white;
+}
+#dark .bold-button {
+  background-color: #789bf2;
+  color: white;
+  font-weight: 700;
+}
+#dark .italian-button {
+  background-color: #789bf2;
+  font-weight: 700;
+  color: white;
+}
+#dark .underlined-button {
+  background-color: #789bf2;
+  font-weight: 700;
   color: white;
 }
